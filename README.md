@@ -8,7 +8,9 @@ This project is my start project boilerplate based on [static-starter](https://g
 
 What I did was create a simple layout for a home, about, news and contact page to get you started more easily. To the original [project](https://github.com/crisberrios/static-starter/) I've added several .scss, .sass and .jade files to build some common blocks based on Refills.
 
-I also rebuild Refill navigation snippet into a **flexbox version**. I didn't like the use of Jquery for the mobile menu. 
+I also rebuild Refill navigation snippet into a **flexbox version**. I didn't like the use of JQuery for the mobile menu. I provided the Photoshop CS6 files for the hero image and the background. The bar logo I borrowed from codyhouse.co and the cards images are from Flickr.
+
+**Feel free create issues, fork it and send pull requests**.
 
 ## DEMO
 
@@ -18,8 +20,12 @@ I also rebuild Refill navigation snippet into a **flexbox version**. I didn't li
 
 
 ### To Do
+ - Fallback for the flexbox menu for old IEs
  - Test on Windows browsers
  - Test on mobile hardware
+
+---
+Original doc:
 
 ### Install npm dependencies
 ```
