@@ -1,10 +1,10 @@
 {
-  "name": "static-starter",
-  "version": "0.0.3",
+  "name": "Boilerplate-Bourbon",
+  "version": "0.0.1",
   "description": "Boilerplate for developing static html sites",
   "repository": {
     "type": "git",
-    "url": "git://github.com/crisberrios/static-starter.git"
+    "url": "git://github.com/sjardim/Boilerplate-Bourbon.git"
   },
   "browser": {
     "jquery": "velocity-animate/node_modules/jquery"
