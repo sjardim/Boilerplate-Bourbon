@@ -1,0 +1,73 @@
+@import "main";
+//HOME
+@import "blocks/hero";
+@import "blocks/cards";
+//@import "blocks/hover-image";
+
+.cards
+  margin: 50px 0
+  +outer-container
+
+.cta
+  position: relative;
+  z-index: 10;
+  color : #fff;
+  background: darken($dark-gray, 10%);
+
+  section
+    padding: 1.5em 1em 1.8em;
+    +outer-container
+    h6
+      text-transform: uppercase;
+      display: table;
+      font-size: 70%;
+      color: $medium-gray;
+      padding-bottom: 2px;
+      border-bottom: 2px solid $dark-gray
+    .comments
+      +media($large-screen)
+        +span-columns(8)
+      .title
+        font-size: 140%;
+        margin: 0;
+        color: $light-gray;
+      .author
+        padding: 0 .5em;
+        color: $medium-gray;
+        font-style: italic
+        &:before
+          content: "– ";
+    button
+      font-size: 1.3em;
+      font-weight: bold;
+      margin-top: 20px;
+      +media($large-screen)
+        +span-columns(4);
+        margin-top: -10px;
+      small
+        color: lighten($action-color, 30%);
+        display: block;        
+        margin-top: 10px;        
+        font-weight: normal;
+        font-size: .7em;        
+
+.services
+  .section-title    
+    margin-bottom: 1.5em    
+  +outer-container
+
+.line-behind-text
+    border-bottom: 1px solid #cacaca
+    text-align: center
+    margin-bottom: 4.5em
+    h6      
+      background: #fff;
+      color: #808080;
+      display: inline-block;
+      font-family: "Roboto Condensed", sans-serif;
+      font-size: 1em;
+      font-weight: 500;
+      padding: 0 10px;
+      position: relative;
+      text-transform: uppercase;
+      top: 34px;

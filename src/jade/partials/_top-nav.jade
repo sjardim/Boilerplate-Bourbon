@@ -1,0 +1,26 @@
+header.navigation(role='banner')
+    .navigation-wrapper
+        a.logo(href='/index.html')
+            img(src='https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/placeholder_logo_1_dark.png', alt='Logo Image')
+        a#js-mobile-menu.navigation-menu-button(href='javascript:void(0)') MENU
+        nav(role='navigation')
+            ul#js-navigation-menu.navigation-menu.show                
+                li.nav-link
+                    a(href='/about.html') About Us
+                li.nav-link
+                    a(href='/news.html') News
+                li.nav-link
+                    a(href='/contact.html') Contact
+                li.nav-link.more
+                    a(href='javascript:void(0)') More
+                    ul.submenu
+                        li
+                            a(href='javascript:void(0)') Submenu Item
+                        li
+                            a(href='javascript:void(0)') Another Item
+        .navigation-tools
+            .search-bar
+                form(role='search')
+                    input(type='search')
+                    button(type='submit')
+                        span.icon.icon-search

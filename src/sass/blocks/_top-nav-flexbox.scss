@@ -1,0 +1,235 @@
+header.navigation { 
+  $navigation-padding: 1em;
+  $navigation-background: $base-background-color;
+  $navigation-color: $action-color;
+  $navigation-color-hover: lighten($action-color, 20%);
+  $navigation-height: 80px;
+  
+  $navigation-nav-button-background: $action-color;
+  $navigation-nav-button-background-hover: lighten($navigation-background, 10%);
+  $navigation-nav-button-border: 1px solid lighten($navigation-nav-button-background, 20%);
+  
+  $navigation-search-background: $navigation-background;
+  $navigation-search-border: 1px solid darken($navigation-background, 20%);
+  $navigation-search-color: $navigation-color;
+
+  $navigation-submenu-padding: 1em;
+  $navigation-submenu-width: 12em;
+  
+  background-color: $navigation-background;
+  border-bottom: 1px solid $light-gray;
+  min-height: $navigation-height;
+  width: 100%;
+  z-index: 999;
+
+  .navigation-wrapper {
+    @include clearfix;
+    @include outer-container;
+    position: relative;
+    z-index: 9999;
+    @include media($large-screen) {
+      display: flex;
+      width: 100%;
+    }
+  }
+
+  .logo {
+    max-height: $navigation-height;
+    padding-left: $navigation-padding;
+    padding-right: 2em;
+
+    img {
+      max-height: $navigation-height;
+      padding: 1.8em 0 0;      
+    }    
+  }
+
+.main-nav {
+  flex: 1;
+  ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;   
+    list-style: none;
+    clear: both;
+    width: 100%;             
+    @include media($large-screen) {
+      clear: none;
+      justify-content: space-around;
+    }
+  }
+  li {
+    display: inline
+  }
+  a {
+    padding: 1rem;
+    font-size: 1.1rem;
+    max-width: 140px;
+    font-weight: bold;
+    text-decoration: none;
+    display: inline-block;
+    display: flex;
+    align-items: flex-start;
+    &:hover, &:focus {
+      background: $action-color;
+      color: #fff;      
+    }
+  }  
+}
+
+@include media($large-screen) {
+  .main-nav {    
+    a {      
+      border-top: 4px solid $base-background-color;
+      font-size: 1.1rem;
+      padding: 1.3rem .8rem 0;
+      &:hover, &:focus {
+        background: $base-background-color;
+        color: $action-color;
+        @include transition (all 0.2s ease-in-out);
+        border-top-color: $action-color;
+      }
+    }
+    .submenu a {
+        border: none;
+        font-size: 1rem;
+    }
+  }
+}
+
+// Elements on the far right
+
+  .navigation-tools {
+    background: darken($action-color, 10%);
+    height: $navigation-height;
+    padding-top: .4rem;
+    
+    @include media($large-screen) {
+      background: transparent;
+      clear: none;      
+    }
+  }
+
+  // Search bar
+
+  .search-bar {
+
+    padding: 0.85em 0.85em 0.7em 0.6em;
+
+    form {
+      position: relative;      
+
+      input[type=search] {
+        @include box-sizing(border-box);
+        background: $navigation-search-background;
+        border-radius: $base-border-radius;
+        border: $navigation-search-border;
+        color: $navigation-search-color;
+        font-size: 1.1em;
+        margin: 0;
+        padding: 0.4em 0.7em;
+        width: 100%;        
+      }
+
+      button[type=submit] {
+        background: $navigation-search-background;
+        border: none;
+        bottom: 0.3em;
+        left: auto;
+        outline: none;
+        padding: 0 9px;
+        position: absolute;
+        right: 0.3em;
+        top: 0.3em;
+        box-shadow: none;
+      }
+    }
+
+    @include media($large-screen) {
+      input {        
+        @include box-sizing(border-box);
+        display: block;
+      }
+    }
+  }
+
+
+  // Sub menus
+
+  li.more.nav-link {
+    > a {
+      padding-right: 0.6em;
+    }
+
+    > a:after {
+      @include position(absolute, auto -0.4em -.08em auto);
+      content: '\25BE';
+      color: $navigation-color;      
+    }
+    &:focus > .submenu,
+    &:hover > .submenu {
+      display: block;
+      position: absolute;
+      z-index:9999
+    }
+
+    @include media($large-screen) {     
+      position: relative;
+    }
+  }
+
+  ul.submenu {
+    display: none;    
+
+    @include media($large-screen) {
+      left: -$navigation-submenu-padding;
+      position: absolute;
+      top: 3em;      
+    }
+
+    .submenu {      
+      @include media($large-screen) {
+        left: $navigation-submenu-width - 0.2em;
+        top: 0;     
+      }
+    }
+
+    li {
+      display: block;
+      padding-right: 0;
+
+      @include media($large-screen) {
+
+        &:first-child > a {          
+          border-top-left-radius: $base-border-radius;
+          border-top-right-radius: $base-border-radius;          
+        }
+
+        &:last-child > a {
+          border-bottom-left-radius: $base-border-radius;
+          border-bottom-right-radius: $base-border-radius;          
+        }
+      }
+
+      a {
+        background-color: darken($navigation-background, 3%);
+        display: inline-block;        
+        line-height: 1;
+        text-align: center;
+
+        @include media($large-screen) {
+          padding: 1rem;
+          background-color: $navigation-background;
+          padding-left: $navigation-submenu-padding;                    
+          width: $navigation-submenu-width;
+          &:hover {
+            background: $action-color;
+            color: #fff
+          }
+        }
+      }
+    }
+  }
+
+}
