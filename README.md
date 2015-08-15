@@ -53,3 +53,6 @@ To run the tests and start monitoring files:
 
 Want to just run `karma start`? Either add `alias karma="./node_modules/karma/bin/karma"` to your shell config or install the karma command line interface globally with `npm install -g karma-cli`.
 
+## License
+
+MIT
