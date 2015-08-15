@@ -4,11 +4,15 @@ Boilerplate Bourbon + Neat + Bitter + Reffils + Jade
 
 This project is my start project boilerplate based on [static-starter](https://github.com/crisberrios/static-starter/) which includes jade templating, HTML5 boilerplate, Normalize, html5shiv, [bourbon](http://www.bourbon.io), neat, bitters and reffils.
 
-It also includes Velocity and jQuery 2.x (velocity dependency). You can easily remove them from package.json before installing.
-
 ### My modifications
 
 What I did was create a simple layout for a home, about, news and contact page to get you started more easily. To the original [project](https://github.com/crisberrios/static-starter/) I've added several .scss, .sass and .jade files to build some common blocks based on Refills.
+
+I also rebuild Refill navigation snipper into a flexbox version. I didn't like the use of Jquery for the mobile menu. 
+
+### To Do
+ - Test on Windows browsers
+ - Test on mobile hardware
 
 ### Install npm dependencies
 ```
